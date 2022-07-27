@@ -1,7 +1,7 @@
-// An iterative implementation of quick sort
+// Implementation of quick sort
 #include <stdio.h>
 
-// A utility function to swap two elements
+// A function to swap two elements
 void swap(int* a, int* b)
 {
 	int t = *a;
@@ -9,7 +9,6 @@ void swap(int* a, int* b)
 	*b = t;
 }
 
-/* This function is same in both iterative and recursive*/
 int partition(int arr[], int l, int h)
 {
 	int x = arr[h];
@@ -30,7 +29,7 @@ l --> Starting index,
 h --> Ending index */
 void quickSortIterative(int arr[], int l, int h)
 {
-	// Create an auxiliary stack
+	// Create an stack
 	int stack[h - l + 1];
 
 	// initialize top of stack
@@ -46,8 +45,7 @@ void quickSortIterative(int arr[], int l, int h)
 		h = stack[top--];
 		l = stack[top--];
 
-		// Set pivot element at its correct position
-		// in sorted array
+		// Set pivot element at its correct position in a sorted array
 		int p = partition(arr, l, h);
 
 		// If there are elements on left side of pivot,
@@ -66,7 +64,7 @@ void quickSortIterative(int arr[], int l, int h)
 	}
 }
 
-// A utility function to print contents of arr
+// A function to print contents of arr
 void printArr(int arr[], int n)
 {
 	int i;
