@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 void addition(long int no1,long int no2)
 {
     printf("%ld", no1 + no2);
@@ -13,8 +14,22 @@ void multiplication(long int no1,long int no2)
 {
     printf("%ld", no1 * no2);
 }
-
-int main()
+void division(long int no1, long int no2)
+{   if(no2!=0){
+    if (no1 % no2 != 0)
+    {
+        float c = no1 / (float)no2;
+        printf("%f", c);
+    }
+    else
+    {
+        printf("%ld", no1 / no2);
+    }
+}else{
+    printf("ERROR : division by 0\n");
+}
+}
+int main(void)
 {
 
     printf("Enter number 1 for further operation :\n");
@@ -25,8 +40,7 @@ int main()
     printf("Enter number 2 for further operation :\n");
     scanf("%ld", &no2);
 
-
-    printf("Enter code of the operation needed:\n 1. Add \t 2. Subtract \t 3. Multiply \n");
+    printf("Enter code of the operation needed:\n 1. Add \t 2. Subtract \t 3. Multiply \t 4. Divide\n");
     int check;
     scanf("%d", &check);
 
@@ -40,6 +54,9 @@ int main()
         break;
     case 3:
         multiplication(no1, no2);
+        break;
+    case 4:
+        division(no1, no2);
         break;
     }
 }
