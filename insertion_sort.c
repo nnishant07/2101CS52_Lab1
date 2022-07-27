@@ -25,8 +25,7 @@ void insertionSort(int arr[], int n)
 	}
 }
 
-// A utility function to print
-// an array of size n
+// A function to print an array of size n
 void printArray(int arr[], int n)
 {
 	int i;
