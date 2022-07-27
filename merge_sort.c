@@ -1,7 +1,7 @@
-// An iterative implementation of quick sort
+// Implementation of quick sort
 #include <stdio.h>
 
-// A utility function to swap two elements
+// A function to swap two elements
 void swap(int* a, int* b)
 {
 	int t = *a;
@@ -9,7 +9,6 @@ void swap(int* a, int* b)
 	*b = t;
 }
 
-/* This function is same in both iterative and recursive*/
 int partition(int arr[], int l, int h)
 {
 	int x = arr[h];
